@@ -8,3 +8,5 @@ TODO:
 - Recalculate variables for DT/HT
 - Improve site design
 - Fix more edge cases
+
+Enhancements made by wersady ([github]([https://github.com/KatK1](https://github.com/wersady)) | [osu! profile]([https://osu.ppy.sh/users/21203707](https://osu.ppy.sh/users/25085447)))
