@@ -8,5 +8,7 @@ TODO:
 - Recalculate variables for DT/HT
 - Improve site design
 - Fix more edge cases
+- Add style sheet
+- Add comments to html
 
 Enhancements made by wersady ([github](https://github.com/wersady) | [osu! profile](https://osu.ppy.sh/users/25085447))
