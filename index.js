@@ -84,11 +84,11 @@ window.addEventListener("DOMContentLoaded", function() {
 function setActive(name) {
     activeInput = name;
     if(name == "acc") {
-        document.getElementById("acc").className = "active";
-        document.getElementById("100s").className = "inactive";
+        document.getElementById("acc").classList.add("active");
+        document.getElementById("100s").classList.remove("active");
     } else {
-        document.getElementById("acc").className = "inactive";
-        document.getElementById("100s").className = "active";
+        document.getElementById("acc").classList.remove("active");
+        document.getElementById("100s").classList.add("active");
     }
     
 }
