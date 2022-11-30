@@ -1,0 +1,108 @@
+body {
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.page-content {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    position: absolute;
+    margin: 0px;           
+    padding: 0px;
+
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px;
+
+    background-color: rgb(41, 42, 45);   
+    border-radius: 55px;
+
+    color: white;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: 600px;
+    text-align: center;
+}
+
+a {
+    color: rgb(229, 223, 24);
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+#beatmap-search-container {
+    width: 50%;
+}
+
+#submit-beatmap {
+    color: rgb(0, 0, 0);
+}
+
+#input-data {
+    width: 30%;
+}
+
+input[type=checkbox] {
+    display:none;
+}
+
+input[type=checkbox] + label {
+    background-image: url("img/EZ.png");
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    height: 65.029px;
+    width: 67px;
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+    
+    -webkit-transition: background-size 0.2s, -webkit-transform 0.2s;
+    transition:         background-size 0.2s, transform 0.2s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function:         ease;
+}
+
+input[type=checkbox]:checked + label {
+    background-size: 100%;
+    -webkit-transform: rotate(5deg);
+    transform:         rotate(5deg);
+}
+
+#EZ + label {
+    background-image: url("./img/EZ.png");
+}
+
+#HR + label {
+    background-image: url("./img/HR.png");
+}
+
+#HT + label {
+    background-image: url("./img/HT.png");
+}
+
+#DT + label {
+    background-image: url("./img/DT.png");
+}
+
+#HD + label {
+    background-image: url("./img/HD.png");
+}
+
+#FL + label {
+    background-image: url("./img/FL.png");
+}
