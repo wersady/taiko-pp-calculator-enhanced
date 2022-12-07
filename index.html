@@ -62,22 +62,23 @@
                         <div id="od-label"></div>
                     </i>
 
-                    <label for="misses">Misses</label>
-                    <label for="acc">Accuracy %</label>
-                    <label for="100s">100s</label>
-                    
-                    <div class="row">
+                    <div class="row">                       
                         <div class="col-md-4">
+                            <label for="misses">Misses</label>
                             <input class="form-control" min="0" value="0" id="misses" type="number" oninput="setActive('misses');">
                         </div>
+                      
                         <div class="col-md-4">
+                            <label for="acc">Acc %</label>
                             <input class="form-control" min="0" value="100" id="acc" type="number" step="0.1" oninput="setActive('acc');">
                         </div>
+
                         <div class="col-md-4">
+                            <label for="100s">100s</label>
                             <input class="form-control" min="0" value="0" id="100s" type="number" oninput="setActive('100s');">
-                        </div>
-                        
+                        </div>                       
                     </div>
+
                     <div id="mods">
                         <input id="EZ" type="checkbox"><label for="EZ"></label>
                         <input id="HR" type="checkbox"><label for="HR"></label>
