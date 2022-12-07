@@ -1,10 +1,14 @@
 body {
+    background-color: rgb(0, 0, 0);
     background-image: url("img/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
     margin: 0px;
     padding: 0px;
+
+    width: 100%;
+    height: 100%;
 }
 
 .page-content {
@@ -17,13 +21,13 @@ body {
     padding: 0px;
 
     width: 100%;
-    height: 100%;
 }
 
 .wrapper {
-    width: 80%;
+    width: 82%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 65px;
+    margin-bottom: 70px;
     padding: 10px;
 
     background-color: rgb(41, 42, 45);   
@@ -33,6 +37,8 @@ body {
     font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 600px;
     text-align: center;
+
+    overflow: auto;
 }
 
 a {
@@ -56,6 +62,14 @@ a:hover {
     width: 30%;
 }
 
+#od-label {
+    margin: 15px;
+}
+
+#mods {
+    margin-top: 15px;
+}
+
 input[type=checkbox] {
     display:none;
 }
@@ -77,10 +91,16 @@ input[type=checkbox] + label {
     transition-timing-function:         ease;
 }
 
+input[type=checkbox]:hover + label {
+    background-size: 90%;
+    -webkit-transform: rotate(2deg);
+    transform:         rotate(2deg);
+}
+
 input[type=checkbox]:checked + label {
     background-size: 100%;
-    -webkit-transform: rotate(5deg);
-    transform:         rotate(5deg);
+    -webkit-transform: rotate(6deg);
+    transform:         rotate(6deg);
 }
 
 #EZ + label {
