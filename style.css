@@ -54,6 +54,12 @@ a:hover {
     width: 50%;
 }
 
+@media screen and (max-width: 1250px) {
+    #beatmap-search-container {
+        width: 70%;
+    }
+}
+
 #submit-beatmap {
     color: rgb(0, 0, 0);
 }
@@ -62,9 +68,16 @@ a:hover {
     width: 30%;
 }
 
+@media screen and (max-width: 1250px) {
+    #input-data {
+        width: 55%;
+    }
+}
+
 #od-label {
     margin: 15px;
 }
+
 
 #mods {
     margin-top: 15px;
