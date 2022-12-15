@@ -8,8 +8,8 @@ This calculator is 100% accurate, any inaccuracies are due to SR being rounded t
 
 TODO:
 - Recalculate variables for DT/HT
-- Improve site design
-- Improve dynamic resizing for multiple screen sizes/devices
+- ~~Improve site design~~
+- ~~Improve dynamic resizing for multiple screen sizes/devices~~
 - Fix more edge cases
 - ~~Add style sheet~~
 - Add comments to html
