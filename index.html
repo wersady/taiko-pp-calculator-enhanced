@@ -1,10 +1,13 @@
 <!doctype html>
 <html lang="en">
    <head>
+        <!-- Meta Content -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <title>osu!taiko PP Calculator</title>
+
         <meta name="description" content="Accurate PP calculator for osu!taiko">
         <meta name="author" content="wersady">
         <meta name="keywords" content="osu, taiko, pp, pp calculator">
@@ -17,6 +20,7 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
@@ -25,15 +29,23 @@
 
     <body>
         <main class="page-content" aria-label="Content">
+            <!-- Style Sheet -->
             <link rel="stylesheet" href="style.css?v=2">
+
+            <!-- Main Content -->
             <div class="wrapper">          
                 <h1>osu!taiko PP Calculator</h1> 
                 <p>An enhanced version of <a href="https://www.taikopp.com/">taikopp.com</a> made by <a href="https://osu.ppy.sh/users/25085447">wersady</a></p>
 
+                <!-- Beatmap Search Inputs -->
                 <div class="container-fluid" id="beatmap-search-container">
                     <label for="beatmap-input">Beatmap Link</label>
+
+                    <!-- Searchbar -->
                     <div class="input-group mb-3">
                         <input class="form-control" id="beatmap-input" type="text" placeholder="https://osu.ppy.sh/beatmapsets/1698707#taiko/3471044">
+
+                        <!-- Search Button -->
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="button" id="submit-beatmap" onclick="getBeatmapInfo()"><i class="fa-solid fa-magnifying-glass"></i>&#8203;</button>
                         </div>
@@ -41,44 +53,58 @@
                 </div>
 
                 <h2>OR</h2>
+
+                <!-- Manual Inputs -->
                 <div class="container-fluid" id="input-data">
+                    <!-- Star Rating -->
                     <label for="strain">Star Rating: (DT/HT inclusive)</label>
                     <div class="input-group mb-3">                                              
                         <input class="form-control" min="0" value="5" id="strain" type="number" step="0.1">
                     </div>
 
+                    <!-- Max Combo -->
                     <label for="numcircles">Max Possible Combo</label>
                     <div class="input-group mb-3">
                         <input class="form-control" min="0" value="500" id="numcircles" type="number">
                     </div>
 
+                    <!-- OD -->
                     <label for="od-input">Overall Difficulty (OD)</label>
                     <div class="input-group mb-3">                        
                         <input class="form-control" min="0" value="5" id="od-input" type="number" step="0.1" oninput="displayOD();">
                     </div>
 
-                    <em>
+                    <!-- Hit window information -->
+                    <em> 
+                        <!-- OD with selected mods -->
                         <div id="od-scaled"></div>
+
+                        <!-- Hit window for 300s -->
                         <div id="od-label"></div>
                     </em>
 
-                    <div class="row">                       
+                    <!-- Triple Input -->
+                    <div class="row">
+                        <!-- Misses -->         
                         <div class="col-md-4">
                             <label for="misses">Misses</label>
                             <input class="form-control" min="0" value="0" id="misses" type="number" oninput="setActive('misses');">
                         </div>
-                      
+                        
+                        <!-- Accuracy-->
                         <div class="col-md-4">
                             <label for="acc">Acc %</label>
                             <input class="form-control" min="0" max="100" value="100" id="acc" type="number" step="0.1" oninput="setActive('acc');">
                         </div>
-
+                        
+                        <!-- 100s Count -->
                         <div class="col-md-4">
                             <label for="100s">100s</label>
                             <input class="form-control" min="0" value="0" id="100s" type="number" oninput="setActive('100s');">
                         </div>                       
                     </div>
 
+                    <!-- Checkboxes for mods -->
                     <div id="mods">
                         <input id="EZ" type="checkbox"><label for="EZ"></label>
                         <input id="HR" type="checkbox"><label for="HR"></label>
@@ -89,9 +115,13 @@
                     </div>                   
                 </div>
 
+                <!-- Divider -->
                 <hr style="background-color: white; height: 3px; border-radius: 2px">
+
+                <!-- Final PP Calculation -->
                 <h1 id="pp"></h1>
 
+                <!-- JS Scripts -->
                 <script src="api.js"></script>
                 <script src="index.js"></script>
             </div>
