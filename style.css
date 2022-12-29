@@ -1,3 +1,4 @@
+/* Background Image */
 body {
     background-color: rgb(0, 0, 0);
     background-image: url("img/background.jpg");
@@ -11,6 +12,7 @@ body {
     height: 100%;
 }
 
+/* Background Blur */
 .page-content {
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
@@ -23,13 +25,16 @@ body {
     width: 100%;
 }
 
+/* Main Div */
 .wrapper {
+    /* Position */
     width: 82%;
     margin: auto;
     margin-top: 65px;
     margin-bottom: 70px;
     padding: 10px;
 
+    /* Style */
     background-color: rgb(41, 42, 45);   
     border-radius: 55px;
 
@@ -41,6 +46,7 @@ body {
     overflow: auto;
 }
 
+/* Link Colors */
 a {
     color: rgb(229, 223, 24);
     font-weight: bold;
@@ -50,6 +56,7 @@ a:hover {
     color: rgb(255, 255, 255);
 }
 
+/* Search Bar Size */
 #beatmap-search-container {
     width: 50%;
 }
@@ -60,10 +67,12 @@ a:hover {
     }
 }
 
+/* Icon Color */
 #submit-beatmap {
     color: rgb(0, 0, 0);
 }
 
+/* Manual Input Field Size */
 #input-data {
     width: 30%;
 }
@@ -74,19 +83,24 @@ a:hover {
     }
 }
 
+/* Hit Window Info */
 #od-label {
     margin: 15px;
 }
 
-
+/* Mods */
 #mods {
     margin-top: 15px;
 }
 
+/* Replace checkboxes with custom images */
+
+/* Don't display checkboxes */
 input[type=checkbox] {
     display:none;
 }
 
+/* Set the checkbox label to the mod icon */
 input[type=checkbox] + label {
     background-image: url("img/EZ.png");
     background-size: 85%;
@@ -98,24 +112,28 @@ input[type=checkbox] + label {
     padding: 0;
     cursor: pointer;
     
+    /* Reset rotation when hovering off the icons */
     -webkit-transition: background-size 0.2s, -webkit-transform 0.2s;
     transition:         background-size 0.2s, transform 0.2s;
     -webkit-transition-timing-function: ease;
     transition-timing-function:         ease;
 }
 
+/* Rotation the icons when hovered over */
 input[type=checkbox]:hover + label {
     background-size: 90%;
     -webkit-transform: rotate(2deg);
     transform:         rotate(2deg);
 }
 
+/* Rotate more when checkbox is selected */
 input[type=checkbox]:checked + label {
     background-size: 100%;
     -webkit-transform: rotate(6deg);
     transform:         rotate(6deg);
 }
 
+/* Set image for each label */
 #EZ + label {
     background-image: url("./img/EZ.png");
 }
