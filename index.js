@@ -29,7 +29,7 @@ async function getBeatmapInfo() {
         }
         //Check if beatmap is taiko
         if(beatmapInfo.mode != 1) {
-            document.getElementById("pp").innerHTML = "Incorrect game mode. Please select a Taiko map";
+            document.getElementById("pp").innerHTML = "Incorrect game mode. Please input a Taiko map";
             return;
         }
 
@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function() {
     var ht = document.getElementById("HT");
     var dt = document.getElementById("DT");
     
-    //Prevent conflicting mods
+    //Prevent conflicting mod combinations
     ez.addEventListener("click", uncheck(hr));
     hr.addEventListener("click", uncheck(ez));
     ht.addEventListener("click", uncheck(dt));
@@ -131,7 +131,7 @@ function hitWindow(od){
     if (document.getElementById("DT").checked){
         hitWindow /= 1.5;
     }
-    // 2 decimals
+    //Roud to 2 decimals
     return Math.round(hitWindow * 100) / 100;
 };
 
@@ -215,10 +215,9 @@ function calcPP(){
         accValue *= Math.max(1.050, 1.075 * accLengthBonus);
     }
 
-    //Final caluclation
+    //Final calculation
     let totalValue = Math.pow(Math.pow(strainValue, 1.1) + Math.pow(accValue, 1.1), 1.0 / 1.1) * globalMultiplier;
 
     //Update DOM
-    document.getElementById("pp").innerHTML = Math.round(totalValue * 1000) / 1000 + " pp";
-    
+    document.getElementById("pp").innerHTML = Math.round(totalValue * 1000) / 1000 + " pp";   
 };
